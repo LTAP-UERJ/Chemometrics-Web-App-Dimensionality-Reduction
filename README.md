@@ -1,64 +1,60 @@
-# Chemometrics-Web-Apps-Dimensionality_Reduction_Exploratory_analysis_app
-App to perform Dimensionality Reduction and Exploratory analysis
-# Chemometrics-Web-Apps (LTAP/UERJ)
-![image](https://static.wixstatic.com/media/1f581c_8d6a8a367d8042509d4843bf27ddd8d4~mv2.jpg/v1/fill/w_979,h_396,al_c,q_85,enc_auto/1f581c_8d6a8a367d8042509d4843bf27ddd8d4~mv2.jpg)
+# Chemometrics Web App - Dimensionality Reduction & Exploratory Analysis (Part 2)
 
-This repository is the colection of all chemometrics apps developed by our group, with the help of the LTAP team. You can contact us through [our website](https://www.ltapuerj.com.br/) or by the developers e-mails:
+![Status](https://img.shields.io/badge/Status-Active-green)
+![License](https://img.shields.io/badge/License-Patented-blue)
 
-- Bernardo Cardeal (bernardocardeal@outlook.com)
-- Licarion Pinto (licarion@gmail.com)
-- Aderval Luna (adsluna@gmail.com)
+Aplicação avançada para Redução de Dimensionalidade e Análise Exploratória de dados químicos complexos.
 
-## Dimensionality_Reduction: Chemometrics R-Web App part 2 ![image](https://img.shields.io/badge/Version-DH--1.0-blueviolet)
-Manuscript link: https://www.sciencedirect.com/science/article/pii/S0169743923000606?dgcid=rss_sd_all
+🔗 **Acesse a versão online:** [Clique aqui](https://ltap.shinyapps.io/dimensionality_reduction/)  
+📖 **Artigo Científico:** [ScienceDirect Link](https://www.sciencedirect.com/science/article/pii/S0169743923000606)
+📝 **Feedback:** Ajude-nos a melhorar nos enviando sugestões para o ltapuerj@gmail.com
 
-- This app is currently available for online usage in [this link](https://ltap.shinyapps.io/dimensionality_reduction/)
-- Complete change log can be seen inside the code
- - Please answer this [questionnaire](https://docs.google.com/forms/d/1js1Wyf81-8oG6u2w3F9lswMV3MUjX6srkBYWkkOj7Zw/edit?ts=633b6a1f) to help us improve the interface
- 
- - Features:
- 
- - Data Adequacy Testing:
-    - Dimensionality reduction adequacy
-      - Bartlett Sphericity Test
-      - Kaiser–Meyer–Olkin Adequacy Test
-    
-    - Homogeneity test
-      - Chi-square test
-      - Fligner-Killeen’s Test
-      - Levene’s Test
-      - Bartlett homogeneity Test
-    
-    - Outlier Test
-      - Chi-squared test for outlier
-      - Dixon tests for outlier
-      - Grubbs tests for one or two outliers in data sample
-      - Rosner's Test for Outliers
+---
 
-- Spectral Resolution Reduction
+## 🚀 Funcionalidades
 
-- Filtering and compression
-	- Low-Variance Filter
-	- High Covariance Filter
-	- Wavelet Transform
+### **1. Data Adequacy & Homogeneity**
+* Testes de Adequação: Bartlett Sphericity e Kaiser–Meyer–Olkin (KMO).
+* Testes de Homogeneidade: Chi-square, Fligner-Killeen, Levene e Bartlett.
 
-- Cluster Analysis
-	- Optimal Number of Cluster Analysis
-	- HCA
-	- K-Means
-	- Heatmap
-	- Correlation Heatmap
+### **2. Outlier Detection**
+* Testes de Dixon, Grubbs e Rosner.
+* Análise baseada em Chi-squared.
 
-- Exploratory Analysis
-  - Parametric Methods
-    - Principal Component Analysis
-		- Robust PCA
-		- Factor Analysis
-		- Independent Component Analysis
-	- Non-Parametric Methods
-		- Kernel PCA
-		- t-distributed stochastic neighbor embedding (t-SNE) 
-		- Non-parametric multidimensional scaling (MDS)
-		- Isomap
+### **3. Spectral Resolution & Filtering**
+* Filtros de Baixa Variância e Alta Covariância.
+* Wavelet Transform para compressão de dados.
 
-- Others Web apps from LTAP
+### **4. Cluster Analysis**
+* Análise do número ótimo de clusters.
+* HCA (Hierarchical Cluster Analysis) e K-Means.
+* Heatmaps de Correlação.
+
+### **5. Exploratory Analysis**
+* **Métodos Paramétricos:** PCA (Principal Component Analysis), Robust PCA, Factor Analysis e ICA.
+* **Métodos Não-Paramétricos:** Kernel PCA, t-SNE, MDS e Isomap.
+
+---
+
+## 💾 Instalação e Uso
+
+O uso via executável segue o regime de **30 dias de teste (Trial)**.
+
+Para rodar via código:
+1. Instale as dependências via RStudio.
+2. Execute o script principal do app disponível neste repositório.
+
+---
+
+## ⚖️ Propriedade Intelectual e Isenção
+
+**Patente:** O software e suas interfaces associadas são patenteados pelo **LTAP-UERJ**. Os arquivos de comprovação estão inclusos neste repositório.
+
+**Disclaimer:** O LTAP-UERJ não se responsabiliza por quaisquer danos decorrentes do uso desta interface ou da interpretação dos resultados gerados.
+
+## 📧 Contato e Equipe
+* **Bernardo Cardeal:** bernardocardeal@outlook.com
+* **Licarion Pinto:** licarion@gmail.com
+* **Aderval Luna:** adsluna@gmail.com
+
+**Laboratório de Tecnologia Analítica de Processos (LTAP/UERJ)**
