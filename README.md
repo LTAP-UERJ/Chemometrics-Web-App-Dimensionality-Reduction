@@ -57,4 +57,22 @@ Para rodar via código:
 * **Licarion Pinto:** licarion@gmail.com
 * **Aderval Luna:** adsluna@gmail.com
 
+## ⚖️ Aviso Legal e Propriedade Intelectual
+
+**Aviso de Patente:** Este software e suas interfaces associadas são protegidos por **Propriedade Intelectual (Patente)**. A documentação comprobatória do registro encontra-se disponível nos arquivos deste repositório para consulta. Todos os direitos são reservados ao **Laboratório de Tecnologia Analítica de Processos (LTAP-UERJ)**.
+
+**Termos de Uso e Licenciamento:**
+* O acesso às ferramentas é disponibilizado para fins acadêmicos e de pesquisa.
+* As versões executáveis deste módulo operam em regime de **Trial de 30 dias** para teste e avaliação de funcionalidades. Após este período, o uso contínuo requer autorização e licenciamento formal junto ao LTAP-UERJ.
+
+**Isenção de Responsabilidade (Disclaimer):** O uso das interfaces e das funcionalidades deste aplicativo é de inteira responsabilidade do usuário. O software é fornecido "no estado em que se encontra" (AS IS), sem garantias de qualquer tipo, expressas ou implícitas. Em nenhuma circunstância os autores ou o LTAP-UERJ serão responsáveis por qualquer reclamação, danos ou outra responsabilidade (seja em contrato, ato ilícito ou de outra forma) decorrente do uso do software ou da interpretação dos dados gerados por ele.
+
+**Citação Acadêmica:**
+Se este software for útil para sua pesquisa, por favor, utilize a seguinte citação:
+> *Segundo Neto, J. L. P. et al. Chemometrics Web App - Dimensionality Reduction & Exploratory Analysis. Laboratório de Tecnologia Analítica de Processos (LTAP-UERJ), 2026.*
+
+
 **Laboratório de Tecnologia Analítica de Processos (LTAP/UERJ)**
+
+## Usage
+After the instalation process the app usage consist in simple open the app in Rstudio enviroment and click the Run App button.
