@@ -68,8 +68,7 @@ Para rodar via código:
 **Isenção de Responsabilidade (Disclaimer):** O uso das interfaces e das funcionalidades deste aplicativo é de inteira responsabilidade do usuário. O software é fornecido "no estado em que se encontra" (AS IS), sem garantias de qualquer tipo, expressas ou implícitas. Em nenhuma circunstância os autores ou o LTAP-UERJ serão responsáveis por qualquer reclamação, danos ou outra responsabilidade (seja em contrato, ato ilícito ou de outra forma) decorrente do uso do software ou da interpretação dos dados gerados por ele.
 
 **Citação Acadêmica:**
-Se este software for útil para sua pesquisa, por favor, utilize a seguinte citação:
-> *Segundo Neto, J. L. P. et al. Chemometrics Web App - Dimensionality Reduction & Exploratory Analysis. Laboratório de Tecnologia Analítica de Processos (LTAP-UERJ), 2026.*
+Se este software for útil para sua pesquisa, por favor, faça a citação do artigo 📖 **Artigo Científico:** [ScienceDirect - Chemometrics and Intelligent Laboratory Systems](https://www.sciencedirect.com/science/article/pii/S0169743922002076)  
 
 
 **Laboratório de Tecnologia Analítica de Processos (LTAP/UERJ)**
