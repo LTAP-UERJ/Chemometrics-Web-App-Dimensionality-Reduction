@@ -61,4 +61,4 @@ Manuscript link: https://www.sciencedirect.com/science/article/pii/S016974392300
 		- Non-parametric multidimensional scaling (MDS)
 		- Isomap
 
-- Others Web apps from LEAMS
+- Others Web apps from LTAP
