@@ -6,7 +6,7 @@
 Aplicação avançada para Redução de Dimensionalidade e Análise Exploratória de dados químicos complexos.
 
 🔗 **Acesse a versão online:** [Clique aqui](https://ltap.shinyapps.io/dimensionality_reduction/)  
-📖 **Artigo Científico:** [ScienceDirect - Chemometrics and Intelligent Laboratory Systems]([https://www.sciencedirect.com/science/article/pii/S0169743922002076](https://www.sciencedirect.com/science/article/pii/S0169743923000606))  
+📖 **Artigo Científico:** [ScienceDirect - Chemometrics and Intelligent Laboratory Systems](https://www.sciencedirect.com/science/article/pii/S0169743923000606)  
 📝 **Feedback:** Ajude-nos a melhorar nos enviando sugestões para o ltapuerj@gmail.com
 
 ---
