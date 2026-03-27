@@ -49,7 +49,7 @@ An advanced application for **Dimensionality Reduction** and **Exploratory Analy
 
 * **Terms of Use:** Access is provided for academic and research purposes.
 * **Licensing:** Executable versions of this module operate under a **30-day Trial** period. Continued use beyond this period requires formal authorization and licensing from LTAP-UERJ.
-* **Disclaimer:** LTAP-UERJ and the authors are not responsible for any damages resulting from the use of this interface or the interpretation of the generated results. The software is provided "as is" (AS IS), without warranties of any kind.
+* **Disclaimer:** LTAP-UERJ and the authors are not responsible for any damages resulting from the use of this interface or the interpretation of the generated results. The software is provided "as is", without warranties of any kind.
 
 ---
 
