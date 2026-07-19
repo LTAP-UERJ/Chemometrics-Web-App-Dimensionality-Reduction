@@ -1,18 +1,18 @@
-# Chemometrics Web App — Synthetic Sampling
+# Chemometrics Web App — Dimensionality Reduction & Exploratory Analysis (Part 2)
 
 ![Status](https://img.shields.io/badge/Status-Active-green)
-![Version](https://img.shields.io/badge/Release-V2-orange)
+![Version](https://img.shields.io/badge/Release-V3-orange)
 ![License](https://img.shields.io/badge/License-Proprietary%20%2F%20INPI%20Registered-red.svg)
 ![R](https://img.shields.io/badge/Language-R-blue.svg)
-![Python](https://img.shields.io/badge/Language-Python-yellow.svg)
 
-Developed by the **Process Analytical Technology Laboratory (LTAP-UERJ)**, this application is a comprehensive tool for handling class imbalance in chemometric and machine learning datasets through synthetic data generation and resampling strategies.
+Developed by the **Process Analytical Technology Laboratory (LTAP-UERJ)**, this application is an advanced platform for exploratory data analysis, feature filtering, signal compression, cluster analysis, and linear/non-linear dimensionality reduction of chemometric datasets.
 
 ---
 
 ## 🔗 Quick Links
 
-* **Online Version:** [Access the Web App](https://ltap.shinyapps.io/Synthetic_Sampling/)
+* **Online Version:** [Access the Web App](https://ltap.shinyapps.io/exploratory_analysis/)
+* **Scientific Article:** [ScienceDirect — Chemometrics Web App Part 2: Dimensionality Reduction and Exploratory Analysis](https://doi.org/10.1016/j.chemolab.2023.104810)
 * **Software Registration (INPI):** [LTAP-UERJ CWA — Registros de Software](https://sites.google.com/view/ltap-uerj/cwa)
 * **Support/Feedback:** [ltapuerj@gmail.com](mailto:ltapuerj@gmail.com)
 
@@ -20,91 +20,65 @@ Developed by the **Process Analytical Technology Laboratory (LTAP-UERJ)**, this 
 
 ## 🆕 Version History (Change Log)
 
-### **V2 — Current Release**
-* **Extended Method Library:** Added Clustering-Based Undersampling, SMOTE-IPF, and SPIDER hybrid methods.
-* **Python Integration:** Full integration with the `imbalanced-learn` and `smote-variants` Python libraries via `reticulate`, enabling access to advanced oversampling and undersampling algorithms.
-* **Diagnostic Tools:** Dedicated diagnostic section with PCA and Robust PCA comparative plots (before vs. after resampling) and t-SNE projections for visual validation.
-* **Report Generation:** Automated report builder with multi-language support, allowing export of full analysis summaries.
-* **Session Save/Restore:** Workspace serialization in `.RData` format for cross-session continuity and cross-module data transfer within the CWA platform.
+### **V3 — Current Release**
+* **Non-Linear Methods Expansion:** Full integration of **t-SNE**, **Kernel PCA**, **Multidimensional Scaling (MDS)**, and **Isomap** for non-linear manifold learning.
+* **Robust Diagnostic Engine:** Integrated Score Distance vs. Orthogonal Distance (Model Distance) outlier diagnostics for robust PCA model validation.
+* **3D Interactive Visualizations:** Full 3D interactive rendering of Scores, Loadings, and BiPlots powered by Plotly.
+* **Wavelet & Filter Compression:** Added Discrete Wavelet Transform (DWT) compression along with Low-Variance and High-Correlation feature selection filters.
+* **Automated Report Builder:** Multi-language HTML/PDF report generator summarizing exploratory models and diagnostic metrics.
+
+### **V2 — Structural Enhancements**
+* Integrated **Robust PCA** ($L_1$-norm / Hubert's ROBPCA) and Factor Analysis (FA).
+* Hierarchical Cluster Analysis (HCA) dendrogram enhancements with custom distance metrics and linkage criteria.
 
 ### **V1 — Initial Release**
-* Core implementation of SMOTE, ADASYN, and basic random resampling methods.
-* Initial data import and preprocessing pipeline.
-* Exploratory PCA visualization for class distribution assessment.
+* Standard Principal Component Analysis (PCA) with 2D score and loading plots.
 
 ---
 
 ## 🚀 Key Features
 
-### 📥 Data Import & Preprocessing
-* Flexible import of `.xlsx` and `.csv` files, with support for transposed formats (samples in columns).
-* Configurable decimal and delimiter settings.
-* Optional class-column detection and spectral data flag.
-* Variable preprocessing: Auto-scaling, Mean Centering, Median Centering, and normality-inducing transformations (Box-Cox, Yeo-Johnson).
+### ✂️ Data Filtering & Compression
+* **Resolution Reduction:** Spectral resolution downsampling for high-density spectral data.
+* **Low-Variance Filter:** Automatic identification and removal of uninformative, near-zero variance features.
+* **High-Correlation Filter:** Elimination of highly collinear and redundant variables based on custom thresholding.
+* **Wavelet Compression:** Discrete Wavelet Transform (DWT) multi-resolution feature reduction.
 
-### ⬆️ Oversampling (Upsampling) Methods
+### 🌳 Cluster Analysis (HCA & Clustering)
+* **Hierarchical Cluster Analysis (HCA):** Agglomerative clustering with customizable linkage (Ward, Complete, Single, Average) and distance metrics (Euclidean, Manhattan, Mahalanobis).
+* **Interactive Dendrograms:** Dynamic dendrogram tree visualization with class color-coding and cluster assignment export.
+
+### 📐 Parametric (Linear) Dimensionality Reduction
 | Method | Description |
 | :--- | :--- |
-| **SMOTE** | Synthetic Minority Over-sampling Technique — interpolation between nearest neighbors. |
-| **SMOTE-NC** | SMOTE for datasets with numerical and categorical features. |
-| **Borderline-SMOTE** | Focuses synthetic generation on boundary samples (danger zone). |
-| **SVM-SMOTE** | Uses Support Vector Machine to identify support vectors as seeds for synthesis. |
-| **ADASYN** | Adaptive Synthetic Sampling — density-based, generates more samples where classification is harder. |
-| **Random Upsampling** | Simple duplication of minority class instances. |
+| **PCA** | Principal Component Analysis — variance-maximizing linear projection. |
+| **Robust PCA** | Outlier-resistant PCA based on Minimum Covariance Determinant (MCD) / ROBPCA. |
+| **Factor Analysis (FA)** | Underlying latent factor identification with orthogonal/oblique rotations (Varimax, Promax). |
+| **ICA** | Independent Component Analysis — blind source separation into statistically independent components. |
 
-### ⬇️ Undersampling (Downsampling) Methods
+### 🌀 Non-Parametric (Non-Linear) Manifold Learning
 | Method | Description |
 | :--- | :--- |
-| **TOMEK Links** | Removes borderline majority-class samples forming Tomek links. |
-| **NearMiss** | Distance-based majority reduction towards minority cluster centroids. |
-| **Edited Nearest Neighbours (ENN)** | Removes samples whose class differs from the majority of their neighbors. |
-| **One Sided Selection (OSS)** | Combines Tomek Links with CNN to clean the majority class. |
-| **Clustering-Based** | Undersamples by replacing cluster members with cluster centroids. |
-| **Random Downsampling** | Random removal of majority class instances. |
+| **Kernel PCA** | Non-linear PCA using RBF, Polynomial, and Sigmoid kernels. |
+| **t-SNE** | $t$-Distributed Stochastic Neighbor Embedding for local structure preservation and cluster separation. |
+| **MDS** | Multidimensional Scaling — classical metric and non-metric pairwise distance preservation. |
+| **Isomap** | Isometric Feature Mapping — geodesic distance preservation across non-linear manifolds. |
 
-### 🔀 Hybrid Methods
-| Method | Description |
-| :--- | :--- |
-| **SMOTE-TL** | SMOTE oversampling followed by Tomek Links cleaning. |
-| **SMOTE-ENN** | SMOTE oversampling followed by ENN cleaning for a cleaner decision boundary. |
-| **SMOTE-IPF** | SMOTE combined with Iterative Partitioning Filter for noise removal. |
-| **SPIDER** | Selective Preprocessing of Imbalanced Data — strength-based selective oversampling. |
-
-### 📊 Diagnostic & Results
-* **PCA & Robust PCA:** Before/after comparison plots — Variance, Loadings, Scores, BiPlot, Residuals, Outliers (2D and 3D).
-* **t-SNE Projection:** Non-linear dimensionality reduction for visual assessment of class separability.
-* **Results Table:** Downloadable resampled dataset and class distribution summary.
+### 📊 Diagnostics & Visualizations
+* **Scree & Variance Plots:** Individual and cumulative variance explained per principal component/factor.
+* **Interactive Loadings & Scores:** 2D and 3D score scatter plots, loading profiles, and unified BiPlots.
+* **Outlier & Residual Diagnostics:** Score distance ($SD$) vs. Orthogonal distance ($OD$) cutoff thresholds for robust sample diagnostic classification.
 
 ---
 
 ## 💾 Installation & Usage
 
 ### **How to Run (R/RStudio)**
-After the installation process, simply open the application in the RStudio environment and click the **"Run App"** button.
-
-### **Python Environment**
-This application requires a Python environment with the following packages:
-```
-imbalanced-learn
-scikit-learn
-numpy
-pandas
-smote-variants (optional, for extended variant library)
-```
-The app uses Python v3.13+ via `reticulate`. A compatible Python environment must be configured before launching.
+After downloading or cloning the unencrypted source files, open the application in RStudio and click the **"Run App"** button at the top right of the editor.
 
 ### **Distribution Models**
-* **Version Shinyapps Version 01:** Open source and free access.
-* **Version Desktop Version 01:** Available as an executable.
-
----
-
-## ⚠️ Methodological Guidelines
-
-> [!IMPORTANT]
-> **Critical recommendations for correct use of synthetic sampling:**
-> - Do **not** excessively increase the number of samples for a single class to avoid overfitted predictive models.
-> - Synthetic samples must **only** be present in the **training set** and never in the test set, to avoid trends, overfitting, and bias errors in model lifecycle evaluation.
+* **Shinyapps Version 01:** Open source and free online access.
+* **Desktop Version 01:** Available as an offline standalone executable.
 
 ---
 
@@ -113,10 +87,11 @@ The app uses Python v3.13+ via `reticulate`. A compatible Python environment mus
 > [!CAUTION]
 > **All Rights Reserved — Intellectual Property Protection (INPI)**
 > 
-> This software, its source code, interface designs, visual assets, and underlying algorithmic implementations are protected under Intellectual Property laws (Brazilian Software Law No. 9.609/98 and Industrial Property Law No. 9.279/96) and registered at the **National Institute of Industrial Property (INPI)**. 
+> This software, its source code, interface designs, visual assets, and underlying analytical workflows are protected under Intellectual Property laws (Brazilian Software Law No. 9.609/98 and Industrial Property Law No. 9.279/96) and registered at the **National Institute of Industrial Property (INPI)**.
 
 ### **Terms of Use & Protection Clause:**
-1. **Mandatory Attribution:** Any academic work, study, publication, software integration, or presentation utilizing or referencing this application **must explicitly credit** the original authors (**Paulo Henrique Couto Simões, Julio Cesar Siqueira, Licarion Pinto, Aderval Luna**) and the **Process Analytical Technology Laboratory (LTAP-UERJ)**.
+1. **Mandatory Attribution & Citation:** Any academic work, scientific article, technical report, software integration, or presentation utilizing or referencing this application **must explicitly credit** the authors (**Paulo Henrique Couto Simões, Julio Cesar Siqueira, Licarion Pinto, Aderval Luna**) and the **Process Analytical Technology Laboratory (LTAP-UERJ)**, and cite the published scientific paper:
+   > B.C. Darz, I.C.A. Lima, A.S. Luna, L. Pinto, *Chemometrics web app's part 2: dimensionality reduction and exploratory analysis*, Chemometrics and Intelligent Laboratory Systems, 237 (2023) 104810. DOI: [10.1016/j.chemolab.2023.104810](https://doi.org/10.1016/j.chemolab.2023.104810)
 2. **Prohibition of Unauthorized Reproduction & Redistribution:** Copying, modifying, decompiling, reverse engineering, re-licensing, sub-licensing, mirroring, or redistributing the source code or binary executables without explicit prior written consent from LTAP-UERJ is strictly prohibited.
 3. **Non-Commercial Use Only:** The application may only be used for personal, educational, or non-commercial academic research purposes unless a specific commercial license has been granted by LTAP-UERJ.
 4. **Disclaimer of Liability:** LTAP-UERJ and the developers accept no responsibility or liability for damages, misinterpretation, or loss resulting from the use of this software or its generated datasets. The software is provided "as is", without warranties of any kind.
