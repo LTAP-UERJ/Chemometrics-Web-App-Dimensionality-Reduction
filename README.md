@@ -29,7 +29,7 @@ This module was developed by the chemometrics research team at **LTAP-UERJ**:
 | **[Bernardo Cardeal Darzé](http://lattes.cnpq.br/0590620499595344)** | LTAP — UERJ | [Lattes Profile](http://lattes.cnpq.br/0590620499595344) |
 | **[José Licarion Pinto Segundo Neto](http://lattes.cnpq.br/5267552018296169)** | LTAP — UERJ | [Lattes Profile](http://lattes.cnpq.br/5267552018296169) |
 | **[Aderval Severino Luna](http://lattes.cnpq.br/0294676847895948)** | UERJ | [Lattes Profile](http://lattes.cnpq.br/0294676847895948) |
-| **I. C. A. Lima** | LTAP — UERJ | [Email](mailto:ltapuerj@gmail.com) |
+| **[Igor Campos de Almeida Lima]** | UERJ | [Lattes Profile](http://lattes.cnpq.br/8976902901816349) | 
 
 ---
 
